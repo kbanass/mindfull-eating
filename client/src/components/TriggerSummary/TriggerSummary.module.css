@@ -1,0 +1,106 @@
+.section {
+  width: 100%;
+}
+
+.section h3 {
+  padding-inline: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+
+.chartSegment[data-trigger="hunger"] {
+  color: var(--color-trigger-hunger);
+}
+
+.chartSegment[data-trigger="routine"] {
+  color: var(--color-trigger-routine);
+}
+
+.chartSegment[data-trigger="stress"] {
+  color: var(--color-trigger-stress);
+}
+
+.chartSegment[data-trigger="craving"] {
+  color: var(--color-trigger-craving);
+}
+
+.chartSegment[data-trigger="boredom"] {
+  color: var(--color-trigger-boredom);
+}
+
+.chartSegment[data-trigger="social"] {
+  color: var(--color-trigger-social);
+}
+
+.legend {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--space-m);
+  row-gap: var(--space-s);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.value {
+  color: var(--color-text-primary);
+  font-weight: 800;
+  margin-left: auto;
+}
+
+/* Dots */
+
+.dot {
+  flex: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+}
+
+.dot[data-trigger="hunger"] {
+  background-color: var(--color-trigger-hunger);
+}
+
+.dot[data-trigger="routine"] {
+  background-color: var(--color-trigger-routine);
+}
+
+.dot[data-trigger="stress"] {
+  background-color: var(--color-trigger-stress);
+}
+
+.dot[data-trigger="craving"] {
+  background-color: var(--color-trigger-craving);
+}
+
+.dot[data-trigger="boredom"] {
+  background-color: var(--color-trigger-boredom);
+}
+
+.dot[data-trigger="social"] {
+  background-color: var(--color-trigger-social);
+}
+
+.label {
+  text-transform: capitalize;
+}

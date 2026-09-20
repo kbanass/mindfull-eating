@@ -1,0 +1,32 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-bg-white);
+
+  padding-block: var(--space-m);
+  padding-bottom: var(--space-l);
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary-disabled);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-s);
+  font-weight: 700;
+}
+.active {
+  color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--color-primary-lighter);
+    background-color: transparent;
+  }
+}

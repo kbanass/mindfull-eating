@@ -1,0 +1,56 @@
+.listWrapper {
+  margin-top: var(--space-m);
+}
+
+.mealsList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: var(--space-m);
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 80px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.headerWrapper small {
+  color: var(--color-text-secondary);
+}
+
+.emptyDay {
+  width: 100%;
+  margin-top: var(--space-xxl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-s);
+}
+.emptyDay p {
+  color: var(--color-text-secondary);
+}
+
+.photoIcon {
+  background-color: var(--color-bg-white);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  padding: var(--space-m);
+  color: var(--color-icon-secondary);
+  margin-bottom: var(--space-l);
+}
+
+.addIcon {
+  display: inline;
+  color: var(--color-primary);
+  height: 1.2rem;
+}

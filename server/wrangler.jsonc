@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mindful-eating-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // TODO: uruchom `wrangler d1 create mindful-eating-db` i wklej zwrócone
+  // database_id poniżej.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "mindful-eating-db",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ],
+
+  // TODO: uruchom `wrangler r2 bucket create mindful-eating-photos`.
+  "r2_buckets": [
+    {
+      "binding": "PHOTOS",
+      "bucket_name": "mindful-eating-photos"
+    }
+  ]
+}

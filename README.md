@@ -1,79 +1,47 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-=======
 # mindfull-eating
->>>>>>> 9ced700e4632667276a36afd7c076c0e37bd2cc4
+
+Aplikacja PWA offline-first do rejestrowania wzorców żywieniowych: zdjęcie posiłku,
+odczucie względem niego i trigger ("dlaczego jem"), z przeglądem miesięcznym.
+
+## Struktura monorepo (npm workspaces)
+
+```
+client/            React + Vite + TypeScript, PWA (vite-plugin-pwa), Dexie (IndexedDB) + OPFS
+server/            Cloudflare Workers + Hono, Drizzle ORM -> D1, upload zdjęć -> R2
+packages/shared/   Schematy Zod i typy współdzielone między client i server
+```
+
+## Wymagania
+
+- Node.js 22+
+- Konto Cloudflare (Workers, D1, R2) — potrzebne do pracy nad `server/`
+
+## Instalacja
+
+```bash
+npm install
+```
+
+## Rozwój
+
+```bash
+npm run dev:client   # Vite dev server (client/)
+npm run dev:server   # wrangler dev (server/)
+```
+
+## Inne komendy
+
+```bash
+npm run lint         # ESLint na całym repo
+npm run typecheck    # tsc --noEmit w każdym workspace
+npm run build:client # build produkcyjny klienta
+```
+
+## Konfiguracja Cloudflare (jednorazowo)
+
+```bash
+cd server
+npx wrangler d1 create mindful-eating-db       # wklej database_id do wrangler.jsonc
+npx wrangler r2 bucket create mindful-eating-photos
+npx wrangler d1 migrations apply mindful-eating-db --local
+```

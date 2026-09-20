@@ -1,0 +1,79 @@
+.mealCard {
+  max-height: max-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-m);
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+.rightColumnWrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-s) var(--space-m);
+  padding-left: 0;
+}
+
+.photo {
+  object-fit: cover;
+
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.time {
+  align-self: self-start;
+}
+
+.mood {
+  justify-self: self-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.editButton {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  justify-self: self-end;
+  color: var(--color-text-primary);
+}
+
+.trigger {
+  justify-self: self-start;
+  background-color: var(--color-bg-gray);
+  width: fit-content;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-s);
+  border-radius: 999px;
+  font-size: var(--font-size-s);
+  text-transform: capitalize;
+}
+.trigger span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  overflow-x: scroll;
+  max-height: 1.6rem;
+  grid-column: span 2;
+  font-size: var(--font-size-s);
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+  margin-left: 4px;
+  margin-top: 4px;
+}

@@ -1,0 +1,111 @@
+.dayPicker {
+  background-color: var(--color-bg-white);
+  max-width: 100%;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--space-s);
+}
+
+.nav button {
+  background-color: var(--color-bg-white);
+  border: 1px solid #5a3c3214;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px -5px #4a3028;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.daysList {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  justify-items: stretch;
+}
+
+.daysList li {
+  margin-inline: var(--space-xxs);
+}
+
+.dayButton {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  padding-block: 6px;
+  border-radius: 12px;
+  color: inherit;
+  width: 100%;
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.dayButton span:first-child {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+}
+
+.dayButton.selected span:first-child {
+  color: var(--color-bg-white);
+  font-size: var(--font-size-s);
+}
+
+.daysList li:last-child span:first-child {
+  color: var(--color-primary);
+}
+
+.daysList li:last-child .selected span:first-child {
+  color: var(--color-bg-white);
+}
+
+.today {
+  outline: var(--color-primary) 1px dashed;
+}
+
+.selected {
+  color: var(--color-bg-white);
+  background-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0px 8px 16px -6px var(--color-primary);
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: var(--space-s);
+}
+
+@media (hover: hover) {
+  .selected:hover {
+    background-color: var(--color-primary-lighter);
+  }
+  .buttonWrapper button:hover {
+    background-color: var(--color-hover-light);
+  }
+}

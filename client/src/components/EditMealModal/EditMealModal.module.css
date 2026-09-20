@@ -1,0 +1,207 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background: var(--color-bg-white);
+  padding-bottom: env(safe-area-inset-bottom);
+  height: 95dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sheetContent {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: var(--font-size-l);
+}
+.subtitle {
+  font-size: var(--font-size-s);
+  color: var(--color-text-secondary);
+}
+
+.handle {
+  margin: 0;
+}
+
+.closeButton {
+  background-color: var(--color-bg-gray);
+  border: none;
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-icon-secondary);
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-shrink: 0;
+  padding-inline: var(--space-m);
+  padding-block: var(--space-s);
+}
+
+.submitButtonWrapper {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-l);
+  padding-inline: var(--space-m);
+  width: 100%;
+  border-top: 1px solid var(--color-bg-gray);
+  box-shadow: 0px -14px 24px -10px var(--color-bg-gray);
+}
+
+.submitButtonWrapper button {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  border-radius: 18px;
+  font-weight: 900;
+  padding-block: var(--space-m);
+
+  border: none;
+  box-shadow: 0px 14px 26px -10px #a4123f;
+  flex-shrink: 0;
+}
+
+.submitButtonWrapper button:disabled {
+  box-shadow: none;
+  background-color: var(--color-primary-disabled);
+}
+
+.formContent {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  padding-inline: var(--space-l);
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.mealPhoto {
+  border-radius: 18px;
+}
+
+form {
+  margin-top: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  justify-content: center;
+  align-items: stretch;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend h4 {
+  font-weight: 900;
+}
+
+legend small {
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  color: var(--color-text-secondary);
+}
+legend {
+  margin-bottom: var(--space-m);
+}
+
+.noteLegend {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.radioButtonWrapper {
+  background-color: var(--color-bg-gray);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-s);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--color-icon-secondary);
+}
+
+.radioButtonWrapper:has(input[type="radio"]:checked) {
+  background-color: var(--color-radio-selected);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 900;
+}
+
+.radioButtonWrapper label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.radioButtonWrapper label span:first-child {
+  font-size: var(--font-size-l);
+}
+
+.radioButtonsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-s);
+}
+
+textarea {
+  background-color: var(--color-bg-gray);
+  border: none;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  width: 100%;
+  padding: var(--space-s) var(--space-m);
+  height: 8ch;
+  font-size: var(--font-size-m);
+  font-weight: 400;
+}
+
+textarea::placeholder {
+  font-size: var(--font-size-s);
+}
+
+.deleteButton {
+  border: 1px solid var(--color-border);
+
+  margin-left: auto;
+  display: flex;
+  justify-self: end;
+  align-items: center;
+  margin-block: var(--space-l);
+  background-color: var(--color-bg-gray);
+  border-radius: 999px;
+  padding: var(--space-s);
+  color: var(--color-icon-secondary);
+}

@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--space-s);
+}
+
+.header button {
+  background-color: var(--color-bg-white);
+  border: 1px solid #5a3c3214;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px -5px #4a3028;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.header h2 {
+  font-size: var(--font-size-l);
+}
+
+.summaryStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-s);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding-inline: var(--space-s);
+}
+
+.stat:nth-child(2) {
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+
+dt {
+  font-weight: 800;
+  font-size: var(--font-size-l);
+}
+
+dt > span {
+  font-size: var(--font-size-s);
+  color: var(--color-text-secondary);
+  padding-left: 2px;
+  font-weight: 500;
+}
+
+dd {
+  font-size: var(--font-size-s);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}

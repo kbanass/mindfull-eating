@@ -1,0 +1,117 @@
+.section {
+  width: 100%;
+}
+
+.section h3 {
+  padding-inline: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.callendarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--space-m);
+}
+
+.columnHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  width: 100%;
+  align-content: center;
+  justify-items: center;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.callendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.callendar > :first-child {
+  grid-column-start: var(--start-col, 1);
+}
+
+.day {
+  font-size: var(--font-size-xs);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  aspect-ratio: 1/1.1;
+  border-radius: 12px;
+  padding: var(--space-xs);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.day.past {
+  background-color: var(--color-mood-empty);
+}
+
+.day.today {
+  outline: 2px dotted var(--color-primary);
+  outline-offset: 2px;
+}
+
+.day[data-mood="super"] {
+  background-color: var(--color-mood-super);
+}
+
+.day[data-mood="ok"] {
+  background-color: var(--color-mood-ok);
+}
+
+.day[data-mood="bad"] {
+  background-color: var(--color-mood-bad);
+}
+
+.calendarLegend {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  gap: var(--space-m);
+  list-style: none;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.calendarLegend li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.legendColor {
+  display: inline-block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 6px;
+}
+
+.legendColor[data-mood="bad"] {
+  background-color: var(--color-mood-bad);
+}
+
+.legendColor[data-mood="ok"] {
+  background-color: var(--color-mood-ok);
+}
+
+.legendColor[data-mood="super"] {
+  background-color: var(--color-mood-super);
+}
+
+.legendColor[data-mood="empty"] {
+  background-color: var(--color-mood-empty);
+}

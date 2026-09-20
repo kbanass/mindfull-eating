@@ -1,0 +1,47 @@
+:root {
+  --color-primary: hsl(342, 80%, 36%);
+  --color-primary-lighter: hsl(342, 80%, 40%);
+
+  --color-primary-disabled: hsl(342, 20%, 70%);
+
+  --color-bg-gray: hsl(37, 32%, 95%);
+  --color-bg-white: hsl(40, 33%, 98%);
+
+  --color-text-primary: #211c19;
+  --color-text-secondary: #878078;
+
+  --color-icon-secondary: #6b625b;
+
+  --color-radio-selected: #fbf1f4;
+
+  --color-border: #5a3c320f;
+
+  --color-hover-light: rgba(0, 0, 0, 0.04);
+
+  --color-mood-super: #3e7d3a;
+  --color-mood-ok: #93c26b;
+  --color-mood-bad: #f0d766;
+  --color-mood-empty: hsl(0, 0%, 92%);
+
+  --color-trigger-hunger: #a4123f;
+  --color-trigger-routine: #3c956e;
+  --color-trigger-social: #e0a63f;
+
+  --color-trigger-craving: #c67a4e;
+  --color-trigger-stress: #7e5e77;
+  --color-trigger-boredom: #b3a99c;
+
+  --space-xxl: 72px;
+  --space-xl: 32px;
+  --space-l: 24px;
+  --space-m: 16px;
+  --space-s: 10px;
+  --space-xs: 6px;
+  --space-xxs: 2px;
+
+  --font-size-xxl: 1.6rem;
+  --font-size-l: 1.2rem;
+  --font-size-m: 1rem;
+  --font-size-s: 0.85rem;
+  --font-size-xs: 0.75rem;
+}
