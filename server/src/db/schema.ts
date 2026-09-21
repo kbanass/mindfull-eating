@@ -1,9 +1,9 @@
 import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 
-// PRZYKŁAD składni Drizzle, nie prawdziwy model domeny.
-// Zaprojektuj sam właściwe tabele (np. wpisy posiłków ze zdjęciem,
-// odczuciem i triggerem) — to jest kluczowa decyzja architektoniczna
-// tego projektu, nie boilerplate.
+// EXAMPLE of Drizzle syntax, not a real domain model.
+// Design the actual tables yourself (e.g. meal entries with a photo,
+// a feeling and a trigger) — that's a key architectural decision
+// of this project, not boilerplate.
 export const example = sqliteTable("example", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   createdAt: text("created_at").notNull(),

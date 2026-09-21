@@ -6,15 +6,15 @@
     "lib": ["ES2023"],
     "types": ["@cloudflare/workers-types"],
 
-    /* Bundler mode (Wrangler używa esbuild) */
+    /* Bundler mode (Wrangler uses esbuild) */
     "module": "esnext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  // drizzle.config.ts jest celowo poza "include": ono działa pod Node
-  // (process.env), a workers-types koliduje z typami Node (Response,
-  // Headers, ...) w jednym tsconfig. drizzle-kit i tak nie type-checkuje
-  // configu przez ten plik przy uruchomieniu.
+  // drizzle.config.ts is intentionally left out of "include": it runs under
+  // Node (process.env), and workers-types conflicts with the Node types
+  // (Response, Headers, ...) within a single tsconfig. drizzle-kit doesn't
+  // type-check the config through this file at runtime anyway.
   "include": ["src"]
 }

@@ -1,6 +1,6 @@
-# Skopiuj do .dev.vars (plik ten jest w .gitignore, nigdy go nie commituj).
-# Potrzebne tylko do `drizzle-kit generate`/`push` po HTTP API D1 —
-# `wrangler dev` i `wrangler d1 migrations apply` ich nie wymagają.
+# Copy to .dev.vars (that file is in .gitignore, never commit it).
+# Only needed for `drizzle-kit generate`/`push` over the D1 HTTP API —
+# `wrangler dev` and `wrangler d1 migrations apply` don't require them.
 CLOUDFLARE_ACCOUNT_ID=
 CLOUDFLARE_DATABASE_ID=
 CLOUDFLARE_D1_TOKEN=

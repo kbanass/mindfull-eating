@@ -6,9 +6,9 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   server: {
     host: true,
-    // Cloudflare Quick Tunnel daje losową subdomenę przy każdym uruchomieniu
-    // (np. random-words.trycloudflare.com) — bez tego Vite odrzuca żądanie
-    // jako "Blocked request" (ochrona przed DNS rebinding).
+    // Cloudflare Quick Tunnel assigns a random subdomain on every run
+    // (e.g. random-words.trycloudflare.com) — without this Vite rejects the
+    // request as "Blocked request" (DNS rebinding protection).
     allowedHosts: [".trycloudflare.com"],
   },
   test: {
@@ -20,23 +20,23 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       workbox: {
-        // OPFS i IndexedDB nie przechodzą przez cache Workboxa — to Twoje
-        // zdjęcia (OPFS) i wpisy (Dexie) żyją poza tym mechanizmem. Ten
-        // cache dotyczy tylko plików aplikacji (JS/CSS/HTML), żeby appka
-        // w ogóle odpaliła się offline.
+        // OPFS and IndexedDB don't go through the Workbox cache — the photos
+        // (OPFS) and entries (Dexie) live outside this mechanism. This cache
+        // only covers the app files (JS/CSS/HTML), so that the app can start
+        // at all while offline.
         globPatterns: ["**/*.{js,css,html,svg}"],
       },
       manifest: {
         name: "Mindful Eating",
         short_name: "Mindful Eating",
-        description: "Dziennik wzorców żywieniowych",
+        description: "Eating patterns journal",
         theme_color: "#ffffff",
         background_color: "#ffffff",
         display: "standalone",
         icons: [
-          // TODO: dodaj właściwe ikony PNG 192x192 i 512x512 (w tym jedną
-          // maskable) — SVG jako jedyne źródło ikon nie jest wspierane
-          // wszędzie przy instalacji PWA.
+          // TODO: add proper PNG icons at 192x192 and 512x512 (including one
+          // maskable) — SVG as the only icon source isn't supported
+          // everywhere when installing a PWA.
           {
             src: "/favicon.svg",
             sizes: "any",

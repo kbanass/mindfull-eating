@@ -1,9 +1,9 @@
 import { defineConfig } from "drizzle-kit";
 
-// Migracje generujemy lokalnie przez drizzle-kit, ale aplikujemy je przez
-// `wrangler d1 migrations apply` (patrz package.json) — to Wrangler, nie
-// drizzle-kit, faktycznie rozmawia z D1 (lokalnym plikiem SQLite albo
-// zdalnym API Cloudflare).
+// Migrations are generated locally by drizzle-kit, but applied through
+// `wrangler d1 migrations apply` (see package.json) — it's Wrangler, not
+// drizzle-kit, that actually talks to D1 (a local SQLite file or the
+// remote Cloudflare API).
 export default defineConfig({
   schema: "./src/db/schema.ts",
   out: "./drizzle",

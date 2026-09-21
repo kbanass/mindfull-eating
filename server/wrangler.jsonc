@@ -5,8 +5,8 @@
   "compatibility_date": "2026-07-30",
   "compatibility_flags": ["nodejs_compat"],
 
-  // TODO: uruchom `wrangler d1 create mindful-eating-db` i wklej zwrócone
-  // database_id poniżej.
+  // TODO: run `wrangler d1 create mindful-eating-db` and paste the returned
+  // database_id below.
   "d1_databases": [
     {
       "binding": "DB",
@@ -15,7 +15,7 @@
     }
   ],
 
-  // TODO: uruchom `wrangler r2 bucket create mindful-eating-photos`.
+  // TODO: run `wrangler r2 bucket create mindful-eating-photos`.
   "r2_buckets": [
     {
       "binding": "PHOTOS",
