@@ -35,7 +35,7 @@ hunger. It lets you see your own food decisions in a broader perspective.
 
 - **Content-addressed storage** — photos are identified by the SHA-256 hash of their
   content rather than a random ID — idempotent write retries for free.
-- **Image compression** — Photos are compressed to square WebP thumbnails, since they only serve as a visual reminder of the meal rather than as high-resolution image storage. This keeps upload size and storage costs low without sacrificing the purpose the photo actually serves.
+- **Image compression** — photos are compressed to square WebP thumbnails, since they only serve as a visual reminder of the meal rather than as high-resolution image storage. This keeps upload size and storage costs low without sacrificing the purpose the photo actually serves.
 - **Ports and adapters** — `MealRepository`/`PhotoStore` are interfaces;
   `DexieMealRepository` and `OpfsPhotoStore` are the concrete implementations. This lets
   `MealService` be tested with fake, in-memory replacements, without a real database. This
