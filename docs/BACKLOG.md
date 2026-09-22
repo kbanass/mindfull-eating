@@ -30,3 +30,8 @@ Not ordered by priority.
 
 - Fine-tune the `getDayMood` algorithm (currently: ≥2 bad meals = bad day) — to be
   verified in real use, whether the threshold reflects the actual feeling well
+
+## Bugs
+
+- Satisfaction heatmap doesn't show right colors for past and future days
+- Textarea in EditMealModal shouldn't be resizable
