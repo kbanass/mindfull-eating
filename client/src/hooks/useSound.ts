@@ -25,7 +25,7 @@ function useSound(src: string, volume: number): () => void {
         gainNode.connect(ctx.destination);
         source.start(0);
       })
-      .catch((err) => console.error("Błąd dekodowania audio:", err));
+      .catch((err) => console.error("Decoding audio error:", err));
   }, [src, volume]);
 
   return play;

@@ -5,7 +5,7 @@ import RightArrow from "../../assets/icons/right-arrow.svg?react";
 import {
   getDateFromNextWeek,
   getDateFromPreviusWeek,
-  getMonthNamePL,
+  getMonthName,
   isSameDay,
 } from "../../utils/date";
 
@@ -52,7 +52,7 @@ export function DayPicker({ currentDate, handleDateChange }: DayPickerProps) {
     <div className={`${styles.dayPicker} card`}>
       <div className={styles.nav}>
         <h3>
-          {getMonthNamePL(currentDate) + currentDate.getFullYear().toString()}
+          {getMonthName(currentDate) + currentDate.getFullYear().toString()}
         </h3>
         <div className={styles.buttonWrapper}>
           <motion.button
@@ -86,7 +86,7 @@ export function DayPicker({ currentDate, handleDateChange }: DayPickerProps) {
   );
 }
 
-const WeekDaysNamesValues = ["pn", "wt", "śr", "cz", "pt", "so", "nd"] as const;
+const WeekDaysNamesValues = ["M", "Tu", "W", "Th", "F", "S", "Sun"] as const;
 
 type WeekDaysNames = (typeof WeekDaysNamesValues)[number];
 

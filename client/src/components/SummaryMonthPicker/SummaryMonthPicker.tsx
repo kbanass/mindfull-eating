@@ -3,7 +3,7 @@ import LeftArrow from "../../assets/icons/left-arrow.svg?react";
 import RightArrow from "../../assets/icons/right-arrow.svg?react";
 
 import { motion } from "motion/react";
-import { getMonthNamePL } from "../../utils/date";
+import { getMonthName } from "../../utils/date";
 
 import type { MealLocal } from "shared";
 
@@ -89,7 +89,7 @@ export function SummaryMonthPicker({
         >
           <LeftArrow />
         </motion.button>
-        <h2>{`${getMonthNamePL(displayedMonthDate)} ${displayedMonthDate.getFullYear()}`}</h2>
+        <h2>{`${getMonthName(displayedMonthDate)} ${displayedMonthDate.getFullYear()}`}</h2>
         <motion.button
           whileTap={{ scale: 0.8 }}
           onPointerDown={switchToNextMonth}
@@ -105,7 +105,7 @@ export function SummaryMonthPicker({
       >
         <div className={styles.stat}>
           <dt>{getNumOfMeals()}</dt>
-          <dd>Posiłki</dd>
+          <dd>Meals</dd>
         </div>
 
         <div className={styles.stat}>
@@ -113,13 +113,13 @@ export function SummaryMonthPicker({
             {getNumOfDaysWithEntry()}
             <span>/{monthLength}</span>
           </dt>
-          <dd>Dni z wpisem</dd>
+          <dd>Days with entry</dd>
         </div>
 
         <div className={styles.stat}>
           <dt>{getMostCommonTrigger()}</dt>
           <dd>
-            <span>Najczęściej</span>
+            <span>Most common</span>
           </dd>
         </div>
       </motion.dl>

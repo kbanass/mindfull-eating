@@ -53,7 +53,7 @@ export function TriggerSummary({ meals }: TriggerSummaryProps) {
 
   return (
     <section className={styles.section}>
-      <h3>Dlaczego jem?</h3>
+      <h3>My triggers this month</h3>
 
       <div ref={wrapperRef} className={`${styles.chartWrapper} card`}>
         <motion.svg
@@ -101,26 +101,23 @@ export function TriggerSummary({ meals }: TriggerSummaryProps) {
           {segments[0] && (
             <g>
               <text
-                x={CHART_WIDTH / 2}
-                y={CHART_HEIGHT / 2 - 8}
+                x={CHART_WIDTH / 2 + 3}
+                y={CHART_HEIGHT / 2 - 16}
                 textAnchor="middle"
-                dominantBaseline="middle"
-                fontSize={32}
                 fontWeight="bold"
+                dominantBaseline="middle"
+                fontSize={24}
               >
-                {triggerEmojis[segments[0].trigger]}
+                {segments[0].percent + "%"}
               </text>
               <text
                 x={CHART_WIDTH / 2}
-                y={CHART_HEIGHT / 2 + 16}
+                y={CHART_HEIGHT / 2 + 20}
                 textAnchor="middle"
                 dominantBaseline="middle"
-                fontSize={16}
+                fontSize={32}
               >
-                {triggerLabels[segments[0].trigger] +
-                  " " +
-                  segments[0].percent +
-                  "%"}
+                {triggerEmojis[segments[0].trigger]}
               </text>
             </g>
           )}

@@ -11,18 +11,18 @@ export const VALID_PHOTO = {
 };
 
 export const triggerLabels: Record<Meal["trigger"], string> = {
-  hunger: "głód",
-  routine: "rutyna",
-  stress: "stres",
-  craving: "zachcianka",
-  boredom: "nuda",
-  social: "towarzysko",
+  hunger: "Hunger",
+  routine: "Routine",
+  stress: "Stress",
+  craving: "Craving",
+  boredom: "Boredom",
+  social: "Social",
 };
 
 export const moodLabels: Record<Meal["mood"], string> = {
-  bad: "źle",
-  ok: "ok",
-  super: "super",
+  bad: "Bad",
+  ok: "Ok",
+  super: "Super",
 };
 
 export const triggerEmojis: Record<Meal["trigger"], string> = {

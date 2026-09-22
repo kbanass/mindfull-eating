@@ -81,11 +81,11 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
   let formatedDate = "";
 
   if (displayedOptions) {
-    title = "id" in displayedOptions ? "Edytuj posiłek" : "Nowy posiłek";
+    title = "id" in displayedOptions ? "Edit meal" : "New meal";
 
     const date = new Date(displayedOptions.dateIso);
     formatedDate = isSameDay(new Date(), date)
-      ? `Dziś ${getFormatedTime(date)}`
+      ? `Today ${getFormatedTime(date)}`
       : getFormatedFullDateAndTime(date);
   }
 
@@ -223,8 +223,8 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
         <form onSubmit={handleSubmit} id="meal-edit-form">
           <fieldset>
             <legend>
-              <h4>Dlaczego jem?</h4>
-              <small>Zauważ co uruchomiło tą decyzję</small>
+              <h4>Why do I eat?</h4>
+              <small>Notice what triggered this decision</small>
             </legend>
             <div className={styles.radioButtonsList}>
               {Object.entries(triggerLabels).map((trigger) => {
@@ -261,7 +261,7 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
 
           <fieldset>
             <legend>
-              <h4>Jak oceniasz tą decyzję?</h4>
+              <h4>Are you satisfied with this decision?</h4>
             </legend>
             <div className={styles.radioButtonsList}>
               {Object.entries(moodLabels).map((mood) => {
@@ -293,7 +293,7 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
 
           <fieldset>
             <legend className={styles.noteLegend}>
-              <h4>Notatka </h4> <small> (opcjonalnie)</small>
+              <h4>Note </h4> <small> (optional)</small>
             </legend>
             <textarea
               minLength={0}
@@ -305,14 +305,14 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
                   : undefined
               }
               onChange={(e) => handleInputChange("note", e.target.value)}
-              placeholder="Co jadłeś? Jak się wtedy czułeś?"
+              placeholder="Empty note"
             ></textarea>
           </fieldset>
         </form>
         {displayedOptions && "id" in displayedOptions && (
           <button onPointerDown={deleteMeal} className={styles.deleteButton}>
             <DeleteIcon />
-            Usuń posiłek
+            Delete meal
           </button>
         )}
       </div>
@@ -322,7 +322,7 @@ function EditMealForm({ displayedOptions, closeModal }: EditMealFormProps) {
           disabled={!isFormChanged() || !isFormFilled()}
           type="submit"
         >
-          Zapisz posiłek
+          Save meal
         </button>
       </div>
     </div>

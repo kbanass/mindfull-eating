@@ -39,7 +39,7 @@ export function MoodSummary({
 
   return (
     <section className={styles.section}>
-      <h3>Satysfakcja dzień po dniu</h3>
+      <h3>Satisfaction in this month</h3>
 
       <motion.div
         key={monthKey}
@@ -49,13 +49,13 @@ export function MoodSummary({
         className={`${styles.callendarWrapper} card`}
       >
         <div className={styles.columnHeader}>
-          <span>Pn</span>
-          <span>Wt</span>
-          <span>Śr</span>
-          <span>Cz</span>
-          <span>Pt</span>
-          <span>So</span>
-          <span>N</span>
+          <span>M</span>
+          <span>Tu</span>
+          <span>W</span>
+          <span>Th</span>
+          <span>F</span>
+          <span>S</span>
+          <span>Sun</span>
         </div>
         <div
           className={`${styles.callendar} `}
@@ -91,7 +91,7 @@ export function MoodSummary({
               data-mood="bad"
               aria-hidden="true"
             ></span>
-            Źle
+            Bad
           </li>
           <li>
             <span
@@ -115,7 +115,7 @@ export function MoodSummary({
               data-mood="empty"
               aria-hidden="true"
             ></span>
-            Brak
+            Empty
           </li>
         </ul>
       </motion.div>
