@@ -8,9 +8,11 @@ hunger. It lets you see your own food decisions in a broader perspective.
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/today.png" width="260" alt="Day view — meals list and date picker" />
-  <img src="docs/screenshots/month-heatmap.png" width="260" alt="Month summary — satisfaction heatmap" />
-  <img src="docs/screenshots/month-triggers.png" width="260" alt="Month summary — chart of the most common reasons for eating" />
+  <img src="docs/screenshots/add-meal-1.png" width="160" alt="Add new meal modal" />
+  <img src="docs/screenshots/add-meal-2.png" width="160" alt="New meal form" />
+  <img src="docs/screenshots/today.png" width="160" alt="Day view — meals list and date picker" />
+  <img src="docs/screenshots/month-summary-1.png" width="160" alt="Month summary — satisfaction heatmap" />
+  <img src="docs/screenshots/month-summary-2.png" width="160" alt="Month summary — chart of the most common reasons for eating" />
 </p>
 
 ## Features
