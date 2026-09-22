@@ -26,7 +26,7 @@ export function Nav({ currentTab, tabChangeHandler }: NavProps) {
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12m0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />
         </svg>
-        Dziś
+        Today
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.8 }}
@@ -49,7 +49,7 @@ export function Nav({ currentTab, tabChangeHandler }: NavProps) {
           <path d="M12.02 15a1 1 0 0 1 0 2a1.001 1.001 0 1 1 -.005 -2z" />
           <path d="M9.015 16a1 1 0 0 1 -1 1a1.001 1.001 0 1 1 -.005 -2c.557 0 1.005 .448 1.005 1" />
         </svg>
-        Miesiąc
+        Month
       </motion.button>
       <motion.button
         whileTap={{ scale: 0.8 }}
@@ -72,7 +72,7 @@ export function Nav({ currentTab, tabChangeHandler }: NavProps) {
           <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
           <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
         </svg>
-        Profil
+        Profile
       </motion.button>
     </nav>
   );

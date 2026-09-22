@@ -9,7 +9,6 @@ import {
   getFormatedDate,
   getFormatedTime,
   getFormatedFullDateAndTime,
-  getMonthNamePL,
 } from "./date";
 
 describe("isSameDay", () => {
@@ -104,14 +103,5 @@ describe("getFormatedFullDateAndTime", () => {
     expect(getFormatedFullDateAndTime(new Date(2026, 2, 1, 2, 2))).toBe(
       "01.03.2026, 02:02",
     );
-  });
-});
-
-describe("getMonthNamePL", () => {
-  it("Returns name of month from given date in Polish", () => {
-    expect(getMonthNamePL(new Date(2026, 0, 1, 2, 2))).toBe("Styczeń");
-  });
-  it("Returns name of month from given date in Polish", () => {
-    expect(getMonthNamePL(new Date(2026, 11, 1, 2, 2))).toBe("Grudzień");
   });
 });

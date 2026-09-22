@@ -34,30 +34,16 @@ export function MealsList({ currentDate, setEditorProps }: MealsListProps) {
     return mealsMetaData;
   }, [currentDate]);
 
-  const pluralRules = new Intl.PluralRules("pl-PL");
-
-  function pluralizeEntries(num: number): string {
-    switch (pluralRules.select(num)) {
-      case "one":
-        return "wpis";
-      case "few":
-        return "wpisy";
-      default:
-        return "wpisów";
-    }
-  }
-
   return (
     <div className={styles.listWrapper}>
       <div className={styles.headerWrapper}>
         <h3>
           {isSameDay(new Date(), currentDate)
-            ? "Dzisiejsze posiłki"
+            ? "Today's meals"
             : getFormatedDate(currentDate)}
         </h3>
         <small>
-          {meals ? meals.length : 0}{" "}
-          {pluralizeEntries(meals ? meals?.length : 0)}
+          {meals ? meals.length : 0} {meals?.length === 1 ? "meal" : "meals"}
         </small>
       </div>
       {meals !== undefined && meals.length > 0 ? (
@@ -76,10 +62,10 @@ export function MealsList({ currentDate, setEditorProps }: MealsListProps) {
       ) : (
         <div className={styles.emptyDay}>
           <PhotoIcon className={styles.photoIcon} />
-          <h3>Nic tu jeszcze nie ma</h3>
+          <h3>There are no meals here yet</h3>
           <p>
-            Wciśnij przycisk
-            <AddIcon className={styles.addIcon} /> żeby dodać pierwszy wpis.
+            Click a button
+            <AddIcon className={styles.addIcon} /> to add Your first meal
           </p>
         </div>
       )}

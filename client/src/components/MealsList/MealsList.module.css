@@ -46,7 +46,7 @@
   border-radius: 50%;
   padding: var(--space-m);
   color: var(--color-icon-secondary);
-  margin-bottom: var(--space-l);
+  margin-bottom: var(--space-s);
 }
 
 .addIcon {

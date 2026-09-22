@@ -49,20 +49,20 @@ export function getFormatedFullDateAndTime(date: Date): string {
   return `${getFormatedDate(date)}.${date.getFullYear().toString()}, ${getFormatedTime(date)}`;
 }
 
-export function getMonthNamePL(date: Date): string {
+export function getMonthName(date: Date): string {
   const months = [
-    "Styczeń",
-    "Luty",
-    "Marzec",
-    "Kwiecień",
-    "Maj",
-    "Czerwiec",
-    "Lipiec",
-    "Sierpień",
-    "Wrzesień",
-    "Październik",
-    "Listopad",
-    "Grudzień",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   return months[date.getMonth()];
