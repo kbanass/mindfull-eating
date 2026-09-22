@@ -71,12 +71,15 @@ export function MoodSummary({
                             ${todayIndex === i ? styles.today : ""} 
                             ${i < todayIndex ? styles.past : ""} 
                             ${
-                              displayedMonthDate.getMonth() <
-                                new Date().getMonth() &&
                               displayedMonthDate.getFullYear() <
-                                new Date().getFullYear()
+                              new Date().getFullYear()
                                 ? styles.past
-                                : ""
+                                : displayedMonthDate.getMonth() <
+                                      new Date().getMonth() &&
+                                    displayedMonthDate.getFullYear() ===
+                                      new Date().getFullYear()
+                                  ? styles.past
+                                  : ""
                             } `}
               >
                 {i + 1}
