@@ -32,5 +32,3 @@ Not ordered by priority.
   verified in real use, whether the threshold reflects the actual feeling well
 
 ## Bugs
-
-- Textarea in EditMealModal shouldn't be resizable
