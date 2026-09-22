@@ -33,5 +33,4 @@ Not ordered by priority.
 
 ## Bugs
 
-- Satisfaction heatmap doesn't show right colors for past and future days
 - Textarea in EditMealModal shouldn't be resizable
